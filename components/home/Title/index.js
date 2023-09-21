@@ -4,10 +4,10 @@ import { colors } from "../../../colors"
 const Title = () => {
     return (<View style={styles.top}>
         <Image
-            source={require('../../../public/robot.png')}
+            source={require('../../../public/iot.png')}
             style={styles.logo}
         />
-        <Text style={styles.title}>ROBOTRIX</Text>
+        <Text style={styles.title}>IOT</Text>
     </View>)
 }
 
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     },
     logo: {
         height: 250,
-        width: 150
+        width: 300
     },
     title: {
         color: colors.textLight,
