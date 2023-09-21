@@ -1,11 +1,11 @@
 {
   "expo": {
     "scheme": "acme",
-    "name": "Robotrix",
-    "slug": "robotrix",
+    "name": "IOT",
+    "slug": "iot",
     "icon": "./public/icon.png",
     "android": {
-      "package": "com.souvik720i.robotrix"
+      "package": "com.souvik720i.iot"
     },
     "plugins": [
       [
@@ -25,10 +25,7 @@
     ],
     "extra": {
       "domain": "http://robotrix-backend-env.eba-f4dbha2k.ap-south-1.elasticbeanstalk.com",
-      "playbackApi": "http://dqy5w0tkqsil7.cloudfront.net/Videos",
-      "eas": {
-        "projectId": "d4fa25f5-8eb9-408b-bdc4-c750ba141f6a"
-      }
+      "playbackApi": "http://dqy5w0tkqsil7.cloudfront.net/Videos"
     }
   }
 }
