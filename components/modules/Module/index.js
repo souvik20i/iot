@@ -1,4 +1,4 @@
-import { Text, Image, TouchableOpacity, StyleSheet } from "react-native"
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native"
 import { useRouter } from "expo-router"
 import { useDispatch } from "react-redux"
 import { FontAwesome } from "@expo/vector-icons"
@@ -15,23 +15,22 @@ const Module = ({ id, name, image, isDone }) => {
     }
 
     return (<TouchableOpacity style={styles.module} onPress={changeModuleHandler}>
-        <Text style={styles.header}>Module {id + 1}</Text>
         {isDone && <FontAwesome name="check-square-o" style={styles.checkmark} size={24} color={colors.success} />}
         <Image
             style={styles.image}
             source={{ uri: image }}
             resizeMode='contain'
         />
-        <Text style={styles.title}>{name}</Text>
+        <View style={styles.titleBlock}>
+            <Text style={styles.title}>{name}</Text>
+        </View>
     </TouchableOpacity>)
 }
 
 const styles = StyleSheet.create({
     module: {
         justifyContent: 'space-between',
-        paddingVertical: 20,
-        paddingHorizontal: 10,
-        marginVertical: 10,
+        marginVertical: 5,
         marginHorizontal: 5,
         borderRadius: 10,
         backgroundColor: colors.bgPrimary,
@@ -44,27 +43,33 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 0.1
     },
-    header: {
-        color: colors.textDark,
-        fontSize: 15,
-        textAlign: 'center'
-    },
     image: {
         width: '100%',
         height: 200,
-        marginVertical: 15,
         borderRadius: 10,
         overflow: 'hidden'
     },
+    titleBlock: {
+        position: 'absolute',
+        bottom: 10,
+        left: 10,
+        backgroundColor: colors.textGrey + '80',
+        borderRadius: 5,
+        padding: 5
+    },
     title: {
-        color: colors.textDark,
-        fontSize: 17,
-        lineHeight: 30
+        color: colors.textLight,
+        fontSize: 20
     },
     checkmark: {
         position: 'absolute',
+        zIndex: 10,
         right: '5%',
-        top: '7%'
+        top: '7%',
+        backgroundColor: colors.bgPrimary,
+        padding: 2,
+        paddingBottom: 0,
+        borderRadius: 5
     }
 })
 
