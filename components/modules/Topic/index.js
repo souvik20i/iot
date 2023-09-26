@@ -26,27 +26,26 @@ const Topic = ({ id, title, length, isLocked }) => {
     return (<TouchableOpacity style={styles.topic} onPress={changeTopicHandler}>
         <Text style={styles.title}>{title}</Text>
         <View style={styles.duration}>
-            <FontAwesome5 name="video" size={12} color={colors.textGrey} />
+            <FontAwesome5 name="video" size={12} color={colors.textDark} />
             <Text style={styles.time}>{duration}</Text>
         </View>
         {isLocked && <View style={styles.lock}>
-            <FontAwesome5 name="lock" size={15} color={colors.textGrey} />
+            <FontAwesome5 name="lock" size={20} color={colors.textDark} />
         </View>}
     </TouchableOpacity >)
 }
 
 const styles = StyleSheet.create({
     topic: {
-        backgroundColor: colors.bgGrey,
-        padding: 20,
-        margin: 10,
-        borderRadius: 10,
-        elevation: 2
+        backgroundColor: colors.bgSecondary + '30',
+        padding: 30,
+        margin: 5,
+        borderRadius: 20
     },
     title: {
         color: colors.textDark,
-        fontSize: 15,
-        lineHeight: 30
+        fontSize: 17,
+        lineHeight: 25
     },
     duration: {
         width: 50,
@@ -54,16 +53,16 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         marginLeft: 2,
-        marginTop: 10
+        marginTop: 15
     },
     time: {
         fontSize: 12,
-        color: colors.textGrey
+        color: colors.textDark
     },
     lock: {
         position: 'absolute',
-        right: 10,
-        bottom: 10
+        right: 20,
+        bottom: 20
     }
 })
 

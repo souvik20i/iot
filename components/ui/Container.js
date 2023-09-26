@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native"
-import Animated, { FadeInDown } from "react-native-reanimated"
+import Animated, { ZoomInDown, SlideInDown } from "react-native-reanimated"
 import { colors } from "../../colors"
 
 const Container = ({ style = {}, children }) => {
     return (<Animated.View
-        entering={FadeInDown.delay(100)}
+        entering={ZoomInDown.delay(100)}
+        exiting={SlideInDown}
         style={{
             ...styles.container,
             ...style

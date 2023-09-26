@@ -32,10 +32,8 @@ const FloatButton = ({ label, href, resist, children }) => {
 const styles = StyleSheet.create({
     button: {
         width: '100%',
-        backgroundColor: colors.bgGrey + '60',
         position: 'absolute',
-        bottom: 0,
-        paddingBottom: 30
+        bottom: 30
     },
     frame: {
         marginHorizontal: '15%',
